@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>lazy</title>
+	<style type="text/css">
+		.demo-lazy-load img{height: 200px;}
+.load-dom{background-color:#f5f5f5;}
+	</style>
+</head>
+<body>
+	<div class="demo-lazy-load "><img src="loading.gif" data-src="http://ott.wansecheng.com/weidian/advertise/1429202253872.jpg" alt=""></div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div><img data-src="http://ott.wansecheng.com/weidian/advertise/1429256031872.jpg" alt=""></div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<img data-src="http://ott.wansecheng.com/weidian/wdgoods/1429250625186.jpg" alt="">
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/><br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<img data-src="http://ott.wansecheng.com/weidian/wdgoods/1429860635284.jpg" alt="">
+		<br/>
+		<img data-src="http://ott.wansecheng.com/weidian/wdgoods/1430072969564.png" alt="">
+		</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/lazy.js"></script>
+<script type="text/javascript">
+$('img').lazy({
+				container: window,
+				//加载完毕之后怎么做
+				effect: 'show',
+				//展现方式
+				effectArgs: 'slow',
+				offset: 0,
+				//加载显示的dom
+				loadDom:'<div><img src="loading.gif"/></div>',
+				//加载的元素
+				elements:"img",
+				//加载之后做什么
+				load:function(){
+					console.log(arguments[0])
+				}
+			}).attr("data-if","true")
+</script>
+</html>
